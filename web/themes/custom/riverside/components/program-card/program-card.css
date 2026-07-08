@@ -1,0 +1,70 @@
+.program-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #E5E3DE;
+  border-radius: 12px;
+  box-shadow:
+    0 12px 28px -6px rgba(0,0,0,.06),
+    0 1px 2px rgba(0,0,0,.05);
+}
+
+.program-card__image img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.program-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  flex: 1;
+}
+
+.program-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: #F2E7E2;
+  border-radius: 4px;
+
+  color: #A85A42;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.program-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.program-card__title a {
+  color: #1B1B1B;
+  text-decoration: none;
+}
+
+.program-card__title a:hover {
+  text-decoration: underline;
+}
+
+.program-card__summary {
+  color: #5B5B5A;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.program-card__meta {
+  margin-top: auto;
+  color: #1B1B1B;
+  font-size: 13px;
+  font-weight: 500;
+}

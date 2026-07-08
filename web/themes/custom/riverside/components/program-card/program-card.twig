@@ -1,0 +1,43 @@
+<article class="program-card">
+
+  {% if image %}
+    <div class="program-card__image">
+      {{ image }}
+    </div>
+  {% endif %}
+
+  {% if image_url %}
+    <div class="program-card__image">
+      <img src="{{ image_url }}" alt="{{ image_alt }}">
+    </div>
+{% endif %}
+
+  <div class="program-card__body">
+
+    {% if category %}
+      <div class="program-card__badge">
+        {{ category }}
+      </div>
+    {% endif %}
+
+    <h3 class="program-card__title">
+      <a href="{{ url }}">
+        {{ title }}
+      </a>
+    </h3>
+
+    {% if summary %}
+      <div class="program-card__summary">
+        {{ summary }}
+      </div>
+    {% endif %}
+
+    {% if meta %}
+      <div class="program-card__meta">
+        {{ meta }}
+      </div>
+    {% endif %}
+
+  </div>
+
+</article>

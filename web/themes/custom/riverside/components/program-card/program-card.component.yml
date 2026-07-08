@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/metadata.schema.json
+
+name: Program Card
+description: Riverside reusable program card.
+
+props:
+  type: object
+
+  required:
+    - title
+    - url
+
+  properties:
+
+    title:
+      type: string
+
+    url:
+      type: string
+
+    image:
+      type: object
+
+    category:
+      type: string
+
+    summary:
+      type: string
+
+    meta:
+      type: string

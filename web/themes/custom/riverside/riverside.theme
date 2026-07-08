@@ -1,0 +1,70 @@
+<?php
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function riverside_preprocess_node(array &$variables): void {
+
+  if (
+    empty($variables['node']) ||
+    !$variables['node'] instanceof NodeInterface ||
+    $variables['node']->bundle() !== 'program' ||
+    $variables['view_mode'] !== 'teaser'
+  ) {
+    return;
+  }
+
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+
+  // Image.
+  $image = [];
+  /*if (!$node->get('field_hero_image')->isEmpty()) {
+    $image = $node->get('field_hero_image')->view([
+      'label' => 'hidden',
+      'type' => 'image',
+      'settings' => [
+        'image_style' => 'large',
+        'image_link' => '',
+      ],
+    ]);
+  }
+*/
+
+  $image = $node->get('field_hero_image')->view([
+  'type' => 'image',
+  'settings' => [
+    'image_style' => 'large',
+  ],
+]);
+
+  // Category.
+  $category = '';
+  if (!$node->get('field_category')->isEmpty()) {
+    $category = $node->get('field_category')->entity->label();
+  }
+
+  // Summary.
+  $summary = '';
+  if (!$node->get('field_body')->isEmpty()) {
+    $summary = text_summary(
+      $node->get('field_body')->value,
+      $node->get('field_body')->format,
+      120
+    );
+  }
+
+  // Temporary meta.
+  $meta = '3 weeks · 10 Jul – 31 Jul';
+
+  $variables['program_card'] = [
+  'title' => $node->label(),
+  'url' => $node->toUrl()->toString(),
+  'image' => $image,
+  'category' => $category ?: '',
+  'summary' => $summary ?: '',
+  'meta' => $meta ?: '',
+  ];
+}

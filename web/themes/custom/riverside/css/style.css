@@ -1,0 +1,31 @@
+:root {
+
+  --color-primary: #1f4b43;
+  --color-secondary: #f6efe4;
+  --color-accent: #e69b2d;
+
+  --text-color: #222;
+  --heading-color: #111;
+
+  --container-width: 1200px;
+
+  --border-radius: 8px;
+
+  --spacing-xs: .5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text-color);
+  background: #fff;
+}

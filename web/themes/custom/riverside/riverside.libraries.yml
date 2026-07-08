@@ -1,0 +1,17 @@
+global:
+  version: 1.x
+
+  css:
+    base:
+      css/style.css: {}
+      css/layout.css: {}
+      css/components.css: {}
+      css/utilities.css: {}
+
+  js:
+    js/global.js: {}
+
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once

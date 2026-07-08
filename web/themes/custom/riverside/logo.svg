@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="100%">
+  <!-- Definition for the flowing river graphic -->
+  <defs>
+    <style>
+      .text-main {
+        font-family: 'Cinzel', 'Playfair Display', 'Didot', 'Georgia', serif;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 6px;
+        fill: #000000;
+      }
+      .text-sub {
+        font-family: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 12px;
+        fill: #000000;
+      }
+      .river-line {
+        fill: none;
+        stroke: #000000;
+        stroke-width: 2;
+        stroke-linecap: round;
+        opacity: 0.8;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(20, 10)">
+    <!-- Elegant Wave/River Accent -->
+    <path d="M 15 35 Q 35 20, 55 35 T 95 35" class="river-line" />
+    
+    <!-- Main Brand Name -->
+    <text x="115" y="42" class="text-main">RIVERSIDE</text>
+    
+    <!-- Subtitle / Secondary Text -->
+    <text x="118" y="72" class="text-sub">COMMONS</text>
+    
+    <!-- Decorative Minimalist Underline -->
+    <line x1="118" y1="88" x2="385" y2="88" stroke="#000000" stroke-width="1" opacity="0.3" />
+  </g>
+</svg>
