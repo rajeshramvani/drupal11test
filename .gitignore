@@ -1,0 +1,9 @@
+/vendor/
+/web/core/
+/web/sites/default/files/
+/web/sites/default/settings.php
+/web/sites/default/services.yml
+
+/.idea/
+/.vscode/
+.DS_Store
