@@ -36,7 +36,7 @@ function riverside_preprocess_node(array &$variables): void {
   $image = $node->get('field_hero_image')->view([
   'type' => 'image',
   'settings' => [
-    'image_style' => 'large',
+    'image_style' => 'program_card',
   ],
 ]);
 

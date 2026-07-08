@@ -11,10 +11,16 @@
     0 1px 2px rgba(0,0,0,.05);
 }
 
-.program-card__image img {
-  display: block;
+.program-card__image {
   width: 100%;
   height: 180px;
+  overflow: hidden;
+}
+
+.program-card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
 }
 
@@ -67,4 +73,34 @@
   color: #1B1B1B;
   font-size: 13px;
   font-weight: 500;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.program-grid__item {
+  display: flex;
+}
+
+.program-card {
+  width: 100%;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.program-grid__item {
+  display: flex;
+}
+
+.program-card {
+  width: 100%;
 }
